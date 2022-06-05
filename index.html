@@ -1,14 +1,226 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div id="root"></div>
+    <link rel="stylesheet" href="dist/styles.css" />
+  </head>
+  <body class="bg-gray-100 text-gray-500 font-body px-4 pb-4">
+    <div class="md:grid grid-cols-4">
+      <div class="mt-4">
+        <nav class="text-center md:text-right">
+          <div class="flex md:block justify-between mb-6">
+            <h1 class="uppercase font-bold text-gray-500">
+              <a href="/">Food Ninja</a>
+            </h1>
+            <button id="menu-btn" class="md:hidden">
+              <svg
+                class="w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <ul id="menu" class="hidden md:block">
+            <li class="menu-item">
+              <a href="#">
+                <svg
+                  class="w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  ></path>
+                </svg>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#">
+                <svg
+                  class="w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                <span>About</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#">
+                <svg
+                  class="w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-    <script src="dist/main.js"></script>
-</body>
+      <main class="px-12 pt-4 col-span-3">
+        <div class="flex justify-center md:justify-end">
+          <a
+            href="#"
+            class="btn md:border-primary md:border-2 text-primary p-1 mr-1 hover:bg-primary hover:text-white"
+            >Log in</a
+          >
+          <a
+            href="#"
+            class="btn md:border-primary md:border-2 text-primary p-1 hover:bg-primary hover:text-white"
+            >Sign up</a
+          >
+        </div>
+
+        <header class="mb-12">
+          <h2 class="font-semibold text-6xl text-gray-700 mb-6">Recipes</h2>
+          <h3 class="text-2xl">For Ninjas</h3>
+        </header>
+
+        <div>
+          <h4 class="font-bold mb-6">Latest Recipes</h4>
+
+          <div class="grid md:grid-cols-3 gap-10 mb-12">
+            <!-- cards go here -->
+            <div class="card">
+              <img
+                src="dist/img/stew.jpeg"
+                alt="stew"
+                class="w-full h-32 sm:h-64 object-cover"
+              />
+              <div>
+                <span class="block font-bold">5 Bean Chili Stew</span>
+                <span class="block font-extralight text-sm"
+                  >Recipe by Mario</span
+                >
+              </div>
+              <div class="badge">
+                <svg
+                  class="w-4 inline-block"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                <span>35 mins</span>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="dist/img/curry.jpeg"
+                alt="curry"
+                class="w-full h-32 sm:h-64 object-cover"
+              />
+              <div>
+                <span class="block font-bold">Indian spicy curry</span>
+                <span class="block font-extralight text-sm"
+                  >Recipe by Elizer</span
+                >
+              </div>
+              <div class="badge">
+                <svg
+                  class="w-4 inline-block"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                <span>20 mins</span>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="dist/img/noodles.jpeg"
+                alt="noodles"
+                class="w-full h-32 sm:h-64 object-cover"
+              />
+              <div>
+                <span class="block font-bold">Angel ultrasound</span>
+                <span class="block font-extralight text-sm"
+                  >Recipe by Kegel</span
+                >
+              </div>
+              <div class="badge">
+                <svg
+                  class="w-4 inline-block"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                <span>35 mins</span>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="font-bold mb-6">Most Popular</h4>
+        </div>
+
+        <div class="flex justify-center">
+          <div
+            class="btn bg-secondary-100 text-secondary-200 hover:bg-white border-2 border-secondary-100"
+          >
+            Load more
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./menu.js"></script>
+  </body>
 </html>
